@@ -12,7 +12,7 @@ public class Cours {
     @Column(name = "titre", length = 100)
     private String titre;
 
-    @Column(name = "presentation", length = 255)
+    @Column(name = "description", length = 255)
     private String description;
     @Column(name = "publie")
     private boolean estPublie;
