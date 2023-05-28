@@ -7,13 +7,13 @@ import java.util.List;
 public interface CoursService {
 
     List<Cours> selectionnerTousLesCours();
-    List<Cours> listeTousLesCoursParPublication(boolean etat);
-    List<Cours> listeTousLesCoursContenantLeTitre(String titre);
+    List<Cours> selectinnerTousLesCoursParPublication(boolean etat);
+    List<Cours> selectionnerTousLesCoursContenantLeTitre(String titre);
 
     Cours selectionnerUnCour(long id);
 
-    Cours ajouterNouveauCour(Cours nouveauCours);
+    Cours ajouterUnNouveauCour(Cours nouveauCours);
     Cours mettreAJourUnCour(Cours majCours);
 
-    void supprimerUnCours(long id);
+    void supprimerUnCour(long id);
 }

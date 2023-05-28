@@ -21,12 +21,12 @@ public class CoursServiceImpl implements CoursService {
     }
 
     @Override
-    public List<Cours> listeTousLesCoursParPublication(boolean etat) {
+    public List<Cours> selectinnerTousLesCoursParPublication(boolean etat) {
         return coursRepository.findByEstPublie(etat);
     }
 
     @Override
-    public List<Cours> listeTousLesCoursContenantLeTitre(String titre) {
+    public List<Cours> selectionnerTousLesCoursContenantLeTitre(String titre) {
         return coursRepository.findByTitreContaining(titre);
     }
 
@@ -41,7 +41,7 @@ public class CoursServiceImpl implements CoursService {
     }
 
     @Override
-    public Cours ajouterNouveauCour(Cours nouveauCours) {
+    public Cours ajouterUnNouveauCour(Cours nouveauCours) {
         return coursRepository.save(nouveauCours);
     }
 
@@ -51,7 +51,7 @@ public class CoursServiceImpl implements CoursService {
     }
 
     @Override
-    public void supprimerUnCours(long id) {
+    public void supprimerUnCour(long id) {
         coursRepository.deleteById(id);
     }
 }
